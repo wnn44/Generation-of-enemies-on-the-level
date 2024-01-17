@@ -14,7 +14,6 @@ public class MoveEnemy : MonoBehaviour
     private void OnEnable()
     {
         Spawn.SpawnPoint += Move;
-
     }
 
     private void OnDisable()
@@ -28,6 +27,11 @@ public class MoveEnemy : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, _position, _speed * Time.deltaTime);
         }
+
+        if(transform.position == _position)
+        {
+            _colliding = true;
+        }
     }
 
     private void Move(Vector3 positionCollectionPoint)
@@ -39,11 +43,4 @@ public class MoveEnemy : MonoBehaviour
 
         _goes = true;
     }
-
-    //Callback when enter the trigger
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        _colliding = true;
-    }
-
 }

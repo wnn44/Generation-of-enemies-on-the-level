@@ -40,8 +40,6 @@ public class Spawn : MonoBehaviour
         Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);
         
         _positionCollectionPoint = _spawnList[numberSpawner].gameObject.transform.Find("CollectionPoint").position;
-
         SpawnPoint?.Invoke(_positionCollectionPoint);
-
     }
 }
