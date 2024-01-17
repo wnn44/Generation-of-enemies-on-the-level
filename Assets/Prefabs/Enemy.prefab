@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 5890312923821544355, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
-  speed: 2
-  colliding: 1
+  speed: 10
+  colliding: 0

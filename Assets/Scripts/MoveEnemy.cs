@@ -13,11 +13,11 @@ public class MoveEnemy : MonoBehaviour
 
     private void Update()
     {
-        //if (!colliding)
+        if (!colliding)
         {
             //Move
             float step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, _gameObject.gameObject.transform.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, _gameObject.gameObject.transform.position, step);
             //Debug.Log(transform.position);
         }
     }
