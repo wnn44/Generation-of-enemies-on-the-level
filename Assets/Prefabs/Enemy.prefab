@@ -143,6 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa78c852f8e8018409598a3a1479198e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObject: {fileID: 5890312923821544355, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
-  speed: 10
-  colliding: 0
+  _speed: 10
+  _colliding: 0
