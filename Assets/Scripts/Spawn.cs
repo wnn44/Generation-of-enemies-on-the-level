@@ -34,7 +34,9 @@ public class Spawn : MonoBehaviour
     private void SpawnNewEnemy()
     {
         int numberSpawner = UnityEngine.Random.Range(0, _spawnList.Count);
-        
+
+        //_spawnPrefab.GetComponent<Renderer>().material.color = Color.white;
+
         _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
         Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);
 
