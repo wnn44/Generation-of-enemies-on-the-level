@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3745365414300883994, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5890312923821544355, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
       propertyPath: m_Name
       value: Spawn_03
@@ -329,7 +333,7 @@ MonoBehaviour:
   - {fileID: 1382098344}
   _spawnTime: 2
   _spawnPrefab: {fileID: 7619345177836110927, guid: f957e31b2c0acc84187102841b897171, type: 3}
-  _numberEnemies: 10
+  _numberEnemies: 100
 --- !u!64 &1499369477
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -500,6 +504,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1918595516083174504, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745365414300883994, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5890312923821544355, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
       propertyPath: m_Name
       value: Spawn_02
@@ -578,9 +590,29 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1918595516083174504, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745365414300883994, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974553943982123047, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974553943982123047, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dd13074fab8167408081539f970379d, type: 2}
     - target: {fileID: 5890312923821544355, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
       propertyPath: m_Name
       value: Spawn_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658676700066431705, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844864609461645974, guid: 2db220fbf361a8147aad424d73d90db4, type: 3}
       propertyPath: m_LocalPosition.x

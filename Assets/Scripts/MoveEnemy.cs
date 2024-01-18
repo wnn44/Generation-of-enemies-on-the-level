@@ -9,36 +9,36 @@ public class MoveEnemy : MonoBehaviour
     [SerializeField] private bool _colliding = false;
     [SerializeField] private bool _goes = false;
 
-    private Vector3 _position;
+    private GameObject _spawner;
 
     private void OnEnable()
     {
-        Spawn.SpawnPoint += Move;
+        Spawn.SpawnerEvent += Move;
     }
 
     private void OnDisable()
     {
-        Spawn.SpawnPoint -= Move;
+        Spawn.SpawnerEvent -= Move;
     }
 
     private void Update()
     {
         if (!_colliding)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _position, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _spawner.gameObject.transform.Find("CollectionPoint").position, _speed * Time.deltaTime);            
         }
 
-        if(transform.position == _position)
+        if (transform.position == _spawner.gameObject.transform.Find("CollectionPoint").position)
         {
             _colliding = true;
         }
     }
 
-    private void Move(Vector3 positionCollectionPoint)
+    private void Move(GameObject spawner)
     {
         if (!_goes)
         {
-            _position = positionCollectionPoint;
+            _spawner = spawner;
         }
 
         _goes = true;

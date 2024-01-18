@@ -10,10 +10,9 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject _spawnPrefab;
     [SerializeField] private int _numberEnemies;
 
-    public static event Action <Vector3> SpawnPoint;
+    public static event Action<GameObject> SpawnerEvent;
 
     private Vector3 _positionSpawnPoint;
-    private Vector3 _positionCollectionPoint;
 
     private void Start()
     {
@@ -38,8 +37,7 @@ public class Spawn : MonoBehaviour
         
         _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
         Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);
-        
-        _positionCollectionPoint = _spawnList[numberSpawner].gameObject.transform.Find("CollectionPoint").position;
-        SpawnPoint?.Invoke(_positionCollectionPoint);
+
+        SpawnerEvent?.Invoke(_spawnList[numberSpawner]);
     }
 }
