@@ -35,7 +35,7 @@ public class Spawn : MonoBehaviour
         int numberSpawner = UnityEngine.Random.Range(0, _spawnList.Count);
 
         _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
-        _enemy = Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);
+        _enemy = Instantiate(_spawnList[numberSpawner].GetComponent<TypeOfEnemy>()._typeEnemy, _positionSpawnPoint, Quaternion.identity);
 
         Vector3 direction = _spawnList[numberSpawner].GetComponent<DirectionMoveEnemy>()._direction;
         SetDirection(direction);
