@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,17 +9,17 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject _spawnPrefab;
     [SerializeField] private int _numberEnemies;
 
-    public static event Action<GameObject> SpawnerEvent;
-
     private Vector3 _positionSpawnPoint;
+
+    private GameObject _enemy;
 
     private void Start()
     {
-        StartCoroutine("SpawnEnemy");
+        StartCoroutine(SpawnEnemy());
     }
 
-    IEnumerator SpawnEnemy()
-    {        
+    private IEnumerator SpawnEnemy()
+    {
         while (_numberEnemies > 0)
         {
             SpawnNewEnemy();
@@ -33,11 +32,18 @@ public class Spawn : MonoBehaviour
 
     private void SpawnNewEnemy()
     {
-        int numberSpawner = UnityEngine.Random.Range(0, _spawnList.Count);        
+        int numberSpawner = UnityEngine.Random.Range(0, _spawnList.Count);
 
         _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
-        Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);        
+        _enemy = Instantiate(_spawnPrefab, _positionSpawnPoint, Quaternion.identity);
 
-        SpawnerEvent?.Invoke(_spawnList[numberSpawner]);
+        Vector3 direction = _spawnList[numberSpawner].GetComponent<DirectionMoveEnemy>()._direction;
+        SetDirection(direction);
+    }
+
+    private void SetDirection(Vector3 direction)
+    {
+        _enemy.transform.LookAt(direction);
     }
 }
+
