@@ -394,7 +394,7 @@ MonoBehaviour:
   - {fileID: 1648389798}
   - {fileID: 563899921}
   _spawnTime: 2
-  _spawnPrefab: {fileID: 7882782418713092965, guid: f957e31b2c0acc84187102841b897171, type: 3}
+  _spawnPrefab: {fileID: 6723724968508349992, guid: f957e31b2c0acc84187102841b897171, type: 3}
   _numberEnemies: 100
 --- !u!64 &1499369477
 MeshCollider:

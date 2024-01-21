@@ -6,12 +6,12 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _spawnList = new List<GameObject>();
     [SerializeField] private int _spawnTime;
-    [SerializeField] private GameObject _spawnPrefab;
+    [SerializeField] private Enemy _spawnPrefab;
     [SerializeField] private int _numberEnemies;
 
     private Vector3 _positionSpawnPoint;
 
-    private GameObject _enemy;
+    private Enemy _enemy;
 
     private void Start()
     {
