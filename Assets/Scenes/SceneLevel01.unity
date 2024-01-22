@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,22 +202,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _typeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: 6d57746cee0481c4485413f0fd58bbb9, type: 3}
     - target: {fileID: 1605195150400212348, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 
       objectReference: {fileID: 689509055}
-    - target: {fileID: 0}
-      propertyPath: _direction.x
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _direction.z
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: m_Name
       value: SpawnPoint_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _goalBeingPursued
+      value: 
+      objectReference: {fileID: 689509055}
     - target: {fileID: 6197698323508234993, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 
@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 1648463267}
     - target: {fileID: 1291728187106055759, guid: bf42e3c021358b14f8672f90c7bb453d, type: 3}
       propertyPath: m_Name
-      value: GoalBeingPursued 2
+      value: Target 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf42e3c021358b14f8672f90c7bb453d, type: 3}
@@ -528,22 +528,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _typeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: f957e31b2c0acc84187102841b897171, type: 3}
     - target: {fileID: 1605195150400212348, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 
       objectReference: {fileID: 1593571490}
-    - target: {fileID: 0}
-      propertyPath: _direction.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _direction.z
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: m_Name
       value: SpawnPoint_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _goalBeingPursued
+      value: 
+      objectReference: {fileID: 1593571490}
     - target: {fileID: 6197698323508234993, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 
@@ -652,6 +652,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845d9e3ea63dcee42acaca09d42c133f, type: 3}
+--- !u!1 &1355152369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291728187106055759, guid: 118980474f9dc584e812880a89646c0f, type: 3}
+  m_PrefabInstance: {fileID: 1593571489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1445202661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291728187106055759, guid: bf42e3c021358b14f8672f90c7bb453d, type: 3}
+  m_PrefabInstance: {fileID: 689509054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1445202665
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445202661}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1499369475
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 135851710}
     - target: {fileID: 1291728187106055759, guid: 118980474f9dc584e812880a89646c0f, type: 3}
       propertyPath: m_Name
-      value: GoalBeingPursued 1
+      value: Target 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118980474f9dc584e812880a89646c0f, type: 3}
@@ -856,6 +882,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1291728187106055754, guid: 118980474f9dc584e812880a89646c0f, type: 3}
   m_PrefabInstance: {fileID: 1593571489}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1593571495
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355152369}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1608759183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,6 +1027,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5853038266733182690, guid: 845d9e3ea63dcee42acaca09d42c133f, type: 3}
   m_PrefabInstance: {fileID: 2035889703}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1806661855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291728187106055759, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
+  m_PrefabInstance: {fileID: 1898968557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1898968557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 1775261446}
     - target: {fileID: 1291728187106055759, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
       propertyPath: m_Name
-      value: GoalBeingPursued 3
+      value: Target 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
@@ -1071,6 +1118,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1291728187106055754, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
   m_PrefabInstance: {fileID: 1898968557}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1898968563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806661855}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1958358910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,22 +1282,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _typeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: c0e49e1a8428be245b4f16d440c05ac3, type: 3}
     - target: {fileID: 1605195150400212348, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 
       objectReference: {fileID: 1898968558}
-    - target: {fileID: 0}
-      propertyPath: _direction.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _direction.z
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: m_Name
       value: SpawnPoint_03
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: _goalBeingPursued
+      value: 
+      objectReference: {fileID: 1898968558}
     - target: {fileID: 6197698323508234993, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 

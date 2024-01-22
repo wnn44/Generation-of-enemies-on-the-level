@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeepingTarget : MonoBehaviour
+public class Target : MonoBehaviour
 {
     [SerializeField] public Transform _goalBeingPursued;
 }

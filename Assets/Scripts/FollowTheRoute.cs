@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GoalBeingPursued : MonoBehaviour
+public class FollowTheRoute : MonoBehaviour
 {
     [SerializeField] private Transform[] _waypoints;
     [SerializeField] private float _speed;
 
     private int _currentWaypoints = 0;
 
-    // Update is called once per frame
     private void Update()
     {
         if (transform.position == _waypoints[_currentWaypoints].position)
@@ -18,6 +15,5 @@ public class GoalBeingPursued : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, _waypoints[_currentWaypoints].position, _speed * Time.deltaTime);
-
     }
 }
