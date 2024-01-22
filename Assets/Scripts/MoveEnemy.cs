@@ -6,6 +6,7 @@ public class MoveEnemy : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_speed * Time.deltaTime * Vector3.forward);
+        var direction = (_goalBeingPursued.position - transform.position).normalized;
+        transform.Translate(direction * _speed * Time.deltaTime);
     }
 }

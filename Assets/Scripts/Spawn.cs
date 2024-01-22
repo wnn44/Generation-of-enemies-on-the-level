@@ -37,13 +37,13 @@ public class Spawn : MonoBehaviour
         _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
         _enemy = Instantiate(_spawnList[numberSpawner].GetComponent<TypeOfEnemy>()._typeEnemy, _positionSpawnPoint, Quaternion.identity);
 
-        Vector3 direction = _spawnList[numberSpawner].GetComponent<DirectionMoveEnemy>()._direction;
-        SetDirection(direction);
+        Transform goalBeingPursued = _spawnList[numberSpawner].GetComponent<KeepingTarget>()._goalBeingPursued;
+        SetTarget(goalBeingPursued);
     }
 
-    private void SetDirection(Vector3 direction)
+    private void SetTarget(Transform goalBeingPursued)
     {
-        _enemy.transform.LookAt(direction);
+        _enemy.transform.(goalBeingPursued);
     }
 }
 
