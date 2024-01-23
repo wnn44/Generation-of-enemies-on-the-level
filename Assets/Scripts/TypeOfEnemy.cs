@@ -2,5 +2,7 @@ using UnityEngine;
 
 public class TypeOfEnemy : MonoBehaviour
 {
-    [SerializeField] public Enemy TypeEnemy;
+    [SerializeField] private Enemy _typeEnemy;
+
+    public Enemy TypeEnemy => _typeEnemy;
 }

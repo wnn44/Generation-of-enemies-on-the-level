@@ -2,5 +2,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] public Transform GoalBeingPursued;
+    [SerializeField] private Transform _goalBeingPursued;
+
+    public Transform GoalBeingPursued => _goalBeingPursued;
 }
