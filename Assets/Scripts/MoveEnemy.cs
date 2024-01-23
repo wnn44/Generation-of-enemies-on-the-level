@@ -3,19 +3,20 @@ using UnityEngine;
 public class MoveEnemy : MonoBehaviour
 {
     [SerializeField] private float _speed;
-
-    public Transform _target;
+    [SerializeField] private float _differentSpeedsMin;
+    [SerializeField] private float _differentSpeedsMax;
+    [SerializeField] public Transform Target;
 
     private float _differentSpeeds;
 
     private void Start()
     {
-        _differentSpeeds = Random.Range(1, 3);
+        _differentSpeeds = Random.Range(_differentSpeedsMin, _differentSpeedsMax);
     }
 
     private void Update()
     {
-        var direction = (_target.position - transform.position).normalized;
+        var direction = (Target.position - transform.position).normalized;
         transform.Translate(direction * _speed * Time.deltaTime * _differentSpeeds);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,6 +195,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
   m_PrefabInstance: {fileID: 2039849532}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &563899925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563899921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7858f427ed539a4a935d18c3a809918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &673703812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: TypeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: 6d57746cee0481c4485413f0fd58bbb9, type: 3}
     - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 
@@ -214,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: GoalBeingPursued
+      value: 
+      objectReference: {fileID: 689509055}
     - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 
@@ -321,6 +341,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291728187106055758, guid: bf42e3c021358b14f8672f90c7bb453d, type: 3}
+      propertyPath: _speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291728187106055758, guid: bf42e3c021358b14f8672f90c7bb453d, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 366032927}
@@ -417,6 +441,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
   m_PrefabInstance: {fileID: 1270406784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &758114235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758114231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7858f427ed539a4a935d18c3a809918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &791505697
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +565,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: TypeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: f957e31b2c0acc84187102841b897171, type: 3}
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 
       objectReference: {fileID: 6723724968508349992, guid: f957e31b2c0acc84187102841b897171, type: 3}
@@ -540,6 +580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: GoalBeingPursued
+      value: 
+      objectReference: {fileID: 1593571490}
     - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 
@@ -674,7 +718,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -711,11 +755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnList:
-  - {fileID: 758114231}
-  - {fileID: 1648389798}
-  - {fileID: 563899921}
+  - {fileID: 758114235}
+  - {fileID: 1648389802}
+  - {fileID: 563899925}
   _spawnTime: 2
-  _spawnPrefab: {fileID: 6723724968508349992, guid: f957e31b2c0acc84187102841b897171, type: 3}
   _numberEnemies: 100
 --- !u!64 &1499369477
 MeshCollider:
@@ -848,6 +891,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291728187106055758, guid: 118980474f9dc584e812880a89646c0f, type: 3}
+      propertyPath: _speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291728187106055758, guid: 118980474f9dc584e812880a89646c0f, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1648463267}
@@ -894,7 +941,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -960,6 +1007,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5890312923821544355, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
   m_PrefabInstance: {fileID: 673703812}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1648389802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648389798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7858f427ed539a4a935d18c3a809918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1648463267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5853038266733182690, guid: 845d9e3ea63dcee42acaca09d42c133f, type: 3}
@@ -1084,6 +1143,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291728187106055758, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
+      propertyPath: _speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291728187106055758, guid: 091c3db5d3679df478bdeae6e0f6a0e7, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 135851710}
@@ -1130,7 +1193,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1283,6 +1346,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: TypeEnemy
+      value: 
+      objectReference: {fileID: 6723724968508349992, guid: c0e49e1a8428be245b4f16d440c05ac3, type: 3}
+    - target: {fileID: 513044602194615234, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _typeEnemy
       value: 
       objectReference: {fileID: 6723724968508349992, guid: c0e49e1a8428be245b4f16d440c05ac3, type: 3}
@@ -1294,6 +1361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint_03
       objectReference: {fileID: 0}
+    - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
+      propertyPath: GoalBeingPursued
+      value: 
+      objectReference: {fileID: 1898968558}
     - target: {fileID: 6121027802357324329, guid: e623bc291b862f0478d6d6e783b6b22b, type: 3}
       propertyPath: _goalBeingPursued
       value: 

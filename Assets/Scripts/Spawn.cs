@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _spawnList = new List<GameObject>();
+    [SerializeField] private List<SpawnPoint> _spawnList = new List<SpawnPoint>();
     [SerializeField] private int _spawnTime;
     [SerializeField] private int _numberEnemies;
-
-    private Vector3 _positionSpawnPoint;
 
     private Enemy _enemy;
 
@@ -33,8 +31,12 @@ public class Spawn : MonoBehaviour
     {
         int numberSpawner = UnityEngine.Random.Range(0, _spawnList.Count);
 
-        _positionSpawnPoint = _spawnList[numberSpawner].gameObject.transform.position;
-        Instantiate(_spawnList[numberSpawner].GetComponent<TypeOfEnemy>()._typeEnemy, _positionSpawnPoint, Quaternion.identity).GetComponent<MoveEnemy>()._target = _spawnList[numberSpawner].GetComponent<Target>()._goalBeingPursued;
+        SpawnPoint spawnPoint = _spawnList[numberSpawner];
+        Vector3  positionSpawnPoint = spawnPoint.gameObject.transform.position;
+        Enemy enemy = spawnPoint.GetComponent<TypeOfEnemy>().TypeEnemy;
+        Transform target = spawnPoint.GetComponent<Target>().GoalBeingPursued;
+
+        Instantiate(enemy, positionSpawnPoint, Quaternion.identity).GetComponent<MoveEnemy>().Target = target;
     }
 }
 

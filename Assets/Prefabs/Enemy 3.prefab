@@ -130,7 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _target: {fileID: 0}
+  _differentSpeedsMin: 1
+  _differentSpeedsMax: 3
+  Target: {fileID: 0}
 --- !u!114 &6723724968508349992
 MonoBehaviour:
   m_ObjectHideFlags: 0
