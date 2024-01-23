@@ -36,7 +36,7 @@ public class Spawn : MonoBehaviour
         Enemy enemy = spawnPoint.GetComponent<TypeOfEnemy>().TypeEnemy;
         Transform target = spawnPoint.GetComponent<Target>().GoalBeingPursued;
 
-        Instantiate(enemy, positionSpawnPoint, Quaternion.identity).GetComponent<MoveEnemy>().Target = target;
+        Instantiate(enemy, positionSpawnPoint, Quaternion.identity).GetComponent<EnemyMove>().Target = target;
     }
 }
 
